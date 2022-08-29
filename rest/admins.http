@@ -9,9 +9,9 @@ POST {{baseUri}}/admins HTTP/1.1
 Content-Type: {{contentType}}
 
 {
-    "firstName": "Nick",
-    "lastName": "Jackson",
-    "username": "nickjackson",
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "admin",
     "password": "admin",
     "confirmPassword": "admin"
 }
