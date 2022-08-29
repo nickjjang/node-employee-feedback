@@ -17,11 +17,9 @@ async function bootstrap() {
     }),
   );
   app.enableCors();
-  const configService = app.get(ConfigService);
 
-  const port = configService.get<number>('port');
-  await app.listen(port, () => {
-    console.log(`Server started: http://localhost:${port}`);
+  await app.listen(parseInt(process.env.PORT, 10) || 3000, () => {
+    console.log(`Server started: http://localhost:${process.env.PORT}`);
   });
 }
 bootstrap();
