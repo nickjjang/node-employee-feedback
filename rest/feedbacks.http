@@ -1,0 +1,21 @@
+@baseUri = http://localhost:8000
+@contentType = application/json
+
+########
+GET {{baseUri}}/feedbacks?skip=0 HTTP/1.1
+
+########
+GET {{baseUri}}/feedbacks/1 HTTP/1.1
+
+########
+POST {{baseUri}}/feedbacks HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "giverId": 1,
+    "receiverId": 2,
+    "reviewId": 1,
+}
+
+########
+DELETE {{baseUri}}/feedbacks/1 HTTP/1.1

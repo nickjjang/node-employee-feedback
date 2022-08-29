@@ -1,0 +1,12 @@
+@baseUri = http://localhost:8000
+@contentType = application/json
+
+########
+POST {{baseUri}}/auth-admins/signin HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: Bear 
+
+{
+    "username": "nickjackson",
+    "password": "admin"
+}

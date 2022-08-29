@@ -1,0 +1,21 @@
+@baseUri = http://localhost:8000
+@contentType = application/json
+
+########
+GET {{baseUri}}/reviews?skip=0 HTTP/1.1
+
+########
+POST {{baseUri}}/reviews HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name": "Performance"
+}
+
+########
+PATCH {{baseUri}}/scopes/3 HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name": "Performance1"
+}
